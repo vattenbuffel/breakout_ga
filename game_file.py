@@ -3,7 +3,7 @@ import pygame
 
 class Game():
     def __init__(self, player, ball, break_able_blocks, display_width, display_height, game_display):
-        self.fps = 30
+        self.fps = 300
 
         self.display_width = display_width
         self.display_height = display_height

@@ -34,7 +34,7 @@ class AI:
 
     # This plays a whole game
     def eval(self, game):
-        n_sequences = self.play_one_game(game, kill_after_not_getting_points_for_n_rounds=200)
+        n_sequences = self.play_one_game(game, kill_after_not_getting_points_for_n_rounds=500)
 
         self.function_score = game.player.score
         self.fitness = game.player.score / n_sequences
