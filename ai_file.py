@@ -13,7 +13,7 @@ from multiprocessing import Pool
 class AI:
     def __init__(self):
         self.d = 5
-        self.n_var = 5
+        self.n_var = 7
         self.n_genes = 100*self.n_var
         self.n_steps_look_into_future = 5
 
@@ -117,6 +117,12 @@ class AI:
 
         # Check angle
         score += abs(game.ball.angle)*self.vars[4]
+
+        # Check y_pos of ball
+        score += game.ball.ball.y * self.vars[5]
+
+        # Check points of player
+        score += game.player.score * self.vars[6]
 
         return score
 
