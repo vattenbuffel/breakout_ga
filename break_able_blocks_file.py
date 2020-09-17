@@ -1,6 +1,6 @@
 from square_file import Square
 from square_file import squares_render
-
+import numpy as np
 
 class Breakable_blocks():
     def __init__(self, display_width, display_height):
@@ -13,8 +13,8 @@ class Breakable_blocks():
         self.display_height = display_height
         self.block_width = self.display_width / self.block_width_n
 
-        self.blocks = [
-            Square(x * self.block_width, y * self.block_height, self.block_width, self.block_height, self.color) for x in range(self.block_width_n) for y in range(self.block_height_n)]
+        self.blocks = np.array([
+            Square(x * self.block_width, y * self.block_height, self.block_width, self.block_height, self.color) for x in range(self.block_width_n) for y in range(self.block_height_n)])
 
         self.highest_y = 0
         self.update_highest_y()
