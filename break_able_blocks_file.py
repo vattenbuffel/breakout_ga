@@ -6,7 +6,7 @@ class Breakable_blocks():
     def __init__(self, display_width, display_height):
         self.block_width_n = 10
         self.block_height = 20
-        self.block_height_n = 2
+        self.block_height_n = 5
 
         self.color = (255, 140, 0)  # darkorange
         self.display_width = display_width

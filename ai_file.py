@@ -32,7 +32,6 @@ class AI:
             if np.random.rand() < self.mutate_probability:
                 self.genes[i] = 1 - self.genes[i]
 
-    # This plays a whole game
     def eval(self, game):
         n_sequences = self.play_one_game(game, kill_after_not_getting_points_for_n_rounds=500)
 
@@ -205,7 +204,7 @@ class AI_population:
         self.tournement_probability = 0.75
         self.tournement_size = 2
         self.best_individual_copies = 1
-        self.n_generations = 25
+        self.n_generations = 1
         self.cross_probability = 0.8
         self.game = game
 
@@ -376,6 +375,7 @@ if __name__ == '__main__':
     # cross_test()
     # best_individual_test()
 
+    np.random.seed(0)
     game = create_game()
 
     ai_pop = AI_population(game)
